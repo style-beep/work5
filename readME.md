@@ -108,7 +108,7 @@ oscillator.stop(audioContext.currentTime + 0.5);
 ```
 🚀 Быстрый старт
 Установка
-bash
+```bash
 # Клонируй репозиторий
 git clone https://github.com/yourusername/music-circles.git
 
@@ -126,7 +126,7 @@ npm install -g live-server
 
 # Запусти сервер
 live-server
-
+```
 💻 Код в деталях
 Основные компоненты
 <details> <summary><b>🎵 Генерация звука</b> (нажми, чтобы раскрыть)</summary>
