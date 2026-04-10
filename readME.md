@@ -68,20 +68,44 @@ graph LR
 Ля	🔵 Синий	#4444FF	440 Hz
 Си	🟣 Фиолетовый	#AA44FF	493 Hz
 ```
-🛠️ Технические детали
-Используемые технологии
-javascript
-// Web Audio API - для генерации звука
+## 🛠️ Технические детали
+
+### Используемые технологии
+
+| Технология | Назначение | Пример кода |
+|------------|------------|-------------|
+| 🎵 **Web Audio API** | Генерация звука | `new AudioContext()` |
+| 🎨 **Canvas API** | Отрисовка графики | `getContext('2d')` |
+| ⚡ **requestAnimationFrame** | Плавная анимация | `requestAnimationFrame(animate)` |
+
+### Ключевые компоненты
+
+<details>
+<summary><b>🎵 Генерация звука (Web Audio API)</b></summary>
+
+```javascript
+// Создаём аудио контекст
 const audioContext = new AudioContext();
+
+// Создаём осциллятор (источник звука)
 const oscillator = audioContext.createOscillator();
 
-// Canvas API - для отрисовки графики
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+// Настраиваем тип волны и частоту
+oscillator.type = "sine";
+oscillator.frequency.value = 440; // Нота Ля
 
-// requestAnimationFrame - для плавной анимации
-requestAnimationFrame(animate);
+// Создаём усилитель громкости
+const gainNode = audioContext.createGain();
+gainNode.gain.value = 0.3;
 
+// Соединяем всё вместе
+oscillator.connect(gainNode);
+gainNode.connect(audioContext.destination);
+
+// Играем звук
+oscillator.start();
+oscillator.stop(audioContext.currentTime + 0.5);
+```
 🚀 Быстрый старт
 Установка
 bash
