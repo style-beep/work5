@@ -130,7 +130,8 @@ live-server
 💻 Код в деталях
 Основные компоненты
 <details> <summary><b>🎵 Генерация звука</b> (нажми, чтобы раскрыть)</summary>
-javascript
+
+```javascript
 function playSound(frequency) {
     const oscillator = audioContext.createOscillator();
     const gain = audioContext.createGain();
@@ -144,9 +145,10 @@ function playSound(frequency) {
     
     oscillator.start();
     oscillator.stop(audioContext.currentTime + 0.3);
-}
-</details><details> <summary><b>⚪ Класс Circle</b></summary>
-javascript
+    }
+    </details><details> <summary><b>⚪ Класс Circle</b></summary>
+```
+```javascript
 class Circle {
     constructor(x, y, note) {
         this.x = x;           // позиция X
@@ -155,10 +157,10 @@ class Circle {
         this.size = 10;       // начальный размер
         this.opacity = 1;     // начальная прозрачность
     }
-    
     update() {
         this.size += 3;       // рост круга
         this.opacity -= 0.02; // исчезновение
     }
 }
 </details>
+```
