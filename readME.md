@@ -29,7 +29,7 @@ music-circles/
 
 | Главный экран |
 |---------------|
-| ![Main](img/image copy.png) |
+| ![Main](img/imagecopy.png) |
 
 ### 🎯 Особенности
 
