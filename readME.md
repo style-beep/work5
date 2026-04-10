@@ -23,13 +23,13 @@ music-circles/
 ├── ⚡ script.js           # JavaScript логика
 ├── 📖 README.md           # Документация проекта
 └── 📂 img/
-    └── 🖼️ image.png       # Превью/скриншот проекта
+    └── 🖼️ image copy.png       # Превью/скриншот проекта
 
 ## 📸 Скриншоты
 
 | Главный экран |
 |---------------|
-| ![Main](img/image.png) |
+| ![Main](img/image copy.png) |
 
 ### 🎯 Особенности
 
